@@ -1,0 +1,70 @@
+.page{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    Header{
+        margin-bottom: 85px;
+    }
+}
+
+.titleBar{
+    margin: auto;
+    margin-bottom: 24px;
+    display: flex;
+    gap: 450px;
+    
+
+    div{
+        display: flex;
+        gap: 8px;
+    }
+
+    .created{
+        color: var(--Blue, #4EA8DE);
+        font-family: Inter;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        -webkit-font-smoothing: antialiased;
+    }
+
+    .completed{
+        color: var(--Purple, #8284FA);
+        font-family: Inter;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+
+    .checked{
+        display: flex;
+        padding: 2px 8px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+
+        border-radius: 999px;
+        background: var(--Gray-400, #333);
+
+        color: var(--Gray-200, #D9D9D9);
+        font-family: Inter;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+}
+
+.tasks{
+    max-width: 736px;
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    
+}

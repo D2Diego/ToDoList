@@ -1,0 +1,23 @@
+.page{
+    display: flex;
+    padding: 16px;
+    align-items: flex-start;
+    gap: 12px;
+    align-self: stretch;
+
+    border-radius: 8px;
+    border: 1px solid var(--Gray-400, #333);
+    background: var(--Gray-500, #262626);
+    box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.06);
+}
+
+.Icon{
+    width: 24px;
+    height: 24px;
+    padding: 3.273px;
+    color: #4EA8DE;
+}
+
+.textCompleted {
+    text-decoration: line-through;
+}
