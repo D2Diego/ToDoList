@@ -9,7 +9,7 @@ function App() {
   const [ tasks, setTasks ] = useState([]);
 
   const addPost = (text) => {
-    if(text.trom() !== ''){
+    if(text.trim() !== ''){
       setTasks([...tasks, { id: Date.now(), text: text, isCompleted: false }])
     }
   }
@@ -20,7 +20,7 @@ function App() {
 
   return (
   <div className={styles.page}>
-      <Header/>
+      <Header addPost={addPost}/>
 
       <div className={styles.titleBar}>
         <div className={styles.created}>Tarefa criada <span className={styles.checked}>5</span> </div>
@@ -28,10 +28,9 @@ function App() {
       </div>
 
       <div className={styles.tasks}>
-        <Post/>
-        <Post/>
-        <Post/>
-        <Post/>
+        { tasks.map(task => (
+          <Post key={task.id} text={task.text} onRemove={() => removePost(task.id)}/>
+        ))}
       </div>
   </div>
   )
