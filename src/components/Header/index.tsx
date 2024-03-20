@@ -4,8 +4,11 @@ import { CiCirclePlus } from "react-icons/ci";
 
 import { useState } from "react";
 
-// eslint-disable-next-line react/prop-types
-export function Header({ addPost }) {
+interface HeaderProps{
+  addPost: (text: string) => void
+}
+
+export function Header({ addPost }: HeaderProps) {
   const [ inputValue, setInputValue ] = useState('');
   
 

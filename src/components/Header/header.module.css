@@ -64,6 +64,7 @@
         width: 638px;
         height: 54px;
         padding: 16px;
+        color: white;
         border-radius: 8px;
         border: 1px solid var(--Gray-700, #0D0D0D);
         background: var(--Gray-500, #262626);

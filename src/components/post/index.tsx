@@ -4,11 +4,15 @@ import { FaRegCircle } from "react-icons/fa6";
 import { FaCircle } from "react-icons/fa6";
 import { FaRegTrashAlt } from "react-icons/fa";
 
+interface PostProps{
+    text: string;
+    onRemove: () => void;
+    toggleCompleted: () => void;
+    isCompleted: boolean;
+}
 
 
-
-// eslint-disable-next-line react/prop-types
-export function Post({ text, onRemove, toggleCompleted, isCompleted }) {
+export function Post({ text, onRemove, toggleCompleted, isCompleted }: PostProps) {
 
 
     const textStyle = isCompleted ? styles.textCompleted : '';

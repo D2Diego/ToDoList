@@ -5,20 +5,25 @@ import { Header } from "./components/Header/index";
 import { Post } from "./components/post/index";
 import { useState } from "react";
 
+interface Task{
+  id: number;
+  text: string;
+  isCompleted: boolean;
+}
 function App() {
-  const [tasks, setTasks] = useState([]);
+  const [tasks, setTasks] = useState<Task[]>([]);
 
-  const addPost = (text) => {
+  const addPost = (text: string) => {
     if (text.trim() !== "") {
       setTasks([...tasks, { id: Date.now(), text: text, isCompleted: false }]);
     }
   };
 
-  const removePost = (taskId) => {
+  const removePost = (taskId: number) => {
     setTasks(tasks.filter((task) => task.id !== taskId));
   };
 
-  const toggleCompleted = (taskId) => {
+  const toggleCompleted = (taskId: number) => {
     setTasks(tasks.map(task => 
       task.id === taskId ?{ ...task, isCompleted: !task.isCompleted } : task
       ))
